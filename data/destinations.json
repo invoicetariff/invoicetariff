@@ -1,0 +1,332 @@
+{
+  "version": "0.2.0",
+  "asOf": "2026-08-31",
+  "note": "非美国目的地的进口环节间接税（VAT/GST）与免税额度参考配置。税率为公开常识级参考值（各税局公布的标准税率），标注 simplified=true：仅覆盖 VAT/GST 与 de minimis 口径，关税以各目的地官方税则为准。",
+  "destinations": [
+    {
+      "code": "US",
+      "name": "美国",
+      "nameEn": "United States",
+      "region": null,
+      "simplified": false,
+      "currency": "USD",
+      "vatRate": null,
+      "vatName": null,
+      "vatNameEn": null,
+      "dutyDeMinimis": null,
+      "vatDeMinimis": null,
+      "deMinimisNote": null,
+      "deMinimisNoteEn": null,
+      "tariffSource": {
+        "title": "USITC Harmonized Tariff Schedule",
+        "url": "https://hts.usitc.gov/"
+      },
+      "fxPerUsd": 1
+    },
+    {
+      "code": "GB",
+      "name": "英国",
+      "nameEn": "United Kingdom",
+      "region": null,
+      "simplified": true,
+      "currency": "GBP",
+      "vatRate": 20,
+      "vatName": "进口增值税",
+      "vatNameEn": "Import VAT",
+      "dutyDeMinimis": 135,
+      "vatDeMinimis": 135,
+      "deMinimisNote": "货值 ≤£135：关税豁免，进口增值税在销售环节由卖家/平台代收，不在边境征收。",
+      "deMinimisNoteEn": "Goods ≤£135: duty exempt; VAT is collected at point of sale rather than at the border.",
+      "tariffSource": {
+        "title": "UK Global Tariff (GOV.UK trade tariff lookup)",
+        "url": "https://www.trade-tariff.service.gov.uk/"
+      },
+      "fxPerUsd": 0.7382
+    },
+    {
+      "code": "DE",
+      "name": "德国",
+      "nameEn": "Germany",
+      "region": "EU",
+      "simplified": true,
+      "currency": "EUR",
+      "vatRate": 19,
+      "vatName": "进口增值税",
+      "vatNameEn": "Import VAT",
+      "dutyDeMinimis": 150,
+      "vatDeMinimis": 0,
+      "deMinimisNote": "欧盟：货值 ≤€150 关税豁免（增值税照缴，可经 IOSS 在销售环节代收）。",
+      "deMinimisNoteEn": "EU: customs duty exempt ≤€150 (VAT still due; may be collected via IOSS at sale).",
+      "tariffSource": {
+        "title": "EU TARIC database (European Commission)",
+        "url": "https://ec.europa.eu/taxation_customs/dds2/taric/taric_consultation.jsp"
+      },
+      "fxPerUsd": 0.8623
+    },
+    {
+      "code": "FR",
+      "name": "法国",
+      "nameEn": "France",
+      "region": "EU",
+      "simplified": true,
+      "currency": "EUR",
+      "vatRate": 20,
+      "vatName": "进口增值税",
+      "vatNameEn": "Import VAT",
+      "dutyDeMinimis": 150,
+      "vatDeMinimis": 0,
+      "deMinimisNote": "欧盟：货值 ≤€150 关税豁免（增值税照缴，可经 IOSS 在销售环节代收）。",
+      "deMinimisNoteEn": "EU: customs duty exempt ≤€150 (VAT still due; may be collected via IOSS at sale).",
+      "tariffSource": {
+        "title": "EU TARIC database (European Commission)",
+        "url": "https://ec.europa.eu/taxation_customs/dds2/taric/taric_consultation.jsp"
+      },
+      "fxPerUsd": 0.8623
+    },
+    {
+      "code": "IT",
+      "name": "意大利",
+      "nameEn": "Italy",
+      "region": "EU",
+      "simplified": true,
+      "currency": "EUR",
+      "vatRate": 22,
+      "vatName": "进口增值税",
+      "vatNameEn": "Import VAT",
+      "dutyDeMinimis": 150,
+      "vatDeMinimis": 0,
+      "deMinimisNote": "欧盟：货值 ≤€150 关税豁免（增值税照缴，可经 IOSS 在销售环节代收）。",
+      "deMinimisNoteEn": "EU: customs duty exempt ≤€150 (VAT still due; may be collected via IOSS at sale).",
+      "tariffSource": {
+        "title": "EU TARIC database (European Commission)",
+        "url": "https://ec.europa.eu/taxation_customs/dds2/taric/taric_consultation.jsp"
+      },
+      "fxPerUsd": 0.8623
+    },
+    {
+      "code": "NL",
+      "name": "荷兰",
+      "nameEn": "Netherlands",
+      "region": "EU",
+      "simplified": true,
+      "currency": "EUR",
+      "vatRate": 21,
+      "vatName": "进口增值税",
+      "vatNameEn": "Import VAT",
+      "dutyDeMinimis": 150,
+      "vatDeMinimis": 0,
+      "deMinimisNote": "欧盟：货值 ≤€150 关税豁免（增值税照缴，可经 IOSS 在销售环节代收）。",
+      "deMinimisNoteEn": "EU: customs duty exempt ≤€150 (VAT still due; may be collected via IOSS at sale).",
+      "tariffSource": {
+        "title": "EU TARIC database (European Commission)",
+        "url": "https://ec.europa.eu/taxation_customs/dds2/taric/taric_consultation.jsp"
+      },
+      "fxPerUsd": 0.8623
+    },
+    {
+      "code": "ES",
+      "name": "西班牙",
+      "nameEn": "Spain",
+      "region": "EU",
+      "simplified": true,
+      "currency": "EUR",
+      "vatRate": 21,
+      "vatName": "进口增值税",
+      "vatNameEn": "Import VAT",
+      "dutyDeMinimis": 150,
+      "vatDeMinimis": 0,
+      "deMinimisNote": "欧盟：货值 ≤€150 关税豁免（增值税照缴，可经 IOSS 在销售环节代收）。",
+      "deMinimisNoteEn": "EU: customs duty exempt ≤€150 (VAT still due; may be collected via IOSS at sale).",
+      "tariffSource": {
+        "title": "EU TARIC database (European Commission)",
+        "url": "https://ec.europa.eu/taxation_customs/dds2/taric/taric_consultation.jsp"
+      },
+      "fxPerUsd": 0.8623
+    },
+    {
+      "code": "PL",
+      "name": "波兰",
+      "nameEn": "Poland",
+      "region": "EU",
+      "simplified": true,
+      "currency": "EUR",
+      "vatRate": 23,
+      "vatName": "进口增值税",
+      "vatNameEn": "Import VAT",
+      "dutyDeMinimis": 150,
+      "vatDeMinimis": 0,
+      "deMinimisNote": "欧盟：货值 ≤€150 关税豁免（增值税照缴，可经 IOSS 在销售环节代收）。",
+      "deMinimisNoteEn": "EU: customs duty exempt ≤€150 (VAT still due; may be collected via IOSS at sale).",
+      "tariffSource": {
+        "title": "EU TARIC database (European Commission)",
+        "url": "https://ec.europa.eu/taxation_customs/dds2/taric/taric_consultation.jsp"
+      },
+      "fxPerUsd": 0.8623
+    },
+    {
+      "code": "CA",
+      "name": "加拿大",
+      "nameEn": "Canada",
+      "region": null,
+      "simplified": true,
+      "currency": "CAD",
+      "vatRate": 5,
+      "vatName": "商品及服务税（GST）",
+      "vatNameEn": "GST",
+      "dutyDeMinimis": 20,
+      "vatDeMinimis": 40,
+      "deMinimisNote": "加拿大：≤CAD 20 关税与税费全免；CAD 20–40 仅征税费不征关税（快递/邮政渠道）。",
+      "deMinimisNoteEn": "Canada: ≤CAD 20 duty & tax free; CAD 20–40 tax due but no duty (courier/postal).",
+      "tariffSource": {
+        "title": "Canada Customs Tariff (Canada.ca)",
+        "url": "https://www.canada.ca/en/department-finance/services/trade-agreements/canada-customs-tariff.html"
+      },
+      "fxPerUsd": 1.3892
+    },
+    {
+      "code": "AU",
+      "name": "澳大利亚",
+      "nameEn": "Australia",
+      "region": null,
+      "simplified": true,
+      "currency": "AUD",
+      "vatRate": 10,
+      "vatName": "商品及服务税（GST）",
+      "vatNameEn": "GST",
+      "dutyDeMinimis": 1000,
+      "vatDeMinimis": 1000,
+      "deMinimisNote": "澳大利亚：≤AUD 1,000 关税与 GST 全免（低值商品 GST 由卖家/平台代收）。",
+      "deMinimisNoteEn": "Australia: ≤AUD 1,000 duty & GST free (low-value GST collected by vendor).",
+      "tariffSource": {
+        "title": "Australian Tariff Classification (ABF)",
+        "url": "https://www.abf.gov.au/importing-exporting-and-manufacturing/tariff-classification"
+      },
+      "fxPerUsd": 1.3959
+    },
+    {
+      "code": "NZ",
+      "name": "新西兰",
+      "nameEn": "New Zealand",
+      "region": null,
+      "simplified": true,
+      "currency": "NZD",
+      "vatRate": 15,
+      "vatName": "商品及服务税（GST）",
+      "vatNameEn": "GST",
+      "dutyDeMinimis": 1000,
+      "vatDeMinimis": 1000,
+      "deMinimisNote": "新西兰：≤NZD 1,000 关税与 GST 全免（低值商品 GST 由卖家/平台代收）。",
+      "deMinimisNoteEn": "New Zealand: ≤NZD 1,000 duty & GST free (low-value GST collected by supplier).",
+      "tariffSource": {
+        "title": "New Zealand Tariff (customs.govt.nz)",
+        "url": "https://www.customs.govt.nz/global-tariff/"
+      },
+      "fxPerUsd": 1.6895
+    },
+    {
+      "code": "JP",
+      "name": "日本",
+      "nameEn": "Japan",
+      "region": null,
+      "simplified": true,
+      "currency": "JPY",
+      "vatRate": 10,
+      "vatName": "消费税",
+      "vatNameEn": "Consumption tax",
+      "dutyDeMinimis": 10000,
+      "vatDeMinimis": 10000,
+      "deMinimisNote": "日本：海关核定价值 ≤¥10,000 关税与消费税全免（酒类等除外）。",
+      "deMinimisNoteEn": "Japan: ≤¥10,000 customs value duty & consumption-tax free (alcohol etc. excluded).",
+      "tariffSource": {
+        "title": "Japan Tariff Schedule (Japan Customs)",
+        "url": "https://www.customs.go.jp/english/tariff/index.htm"
+      },
+      "fxPerUsd": 160.05
+    },
+    {
+      "code": "SG",
+      "name": "新加坡",
+      "nameEn": "Singapore",
+      "region": null,
+      "simplified": true,
+      "currency": "SGD",
+      "vatRate": 9,
+      "vatName": "商品及服务税（GST）",
+      "vatNameEn": "GST",
+      "dutyDeMinimis": 400,
+      "vatDeMinimis": 400,
+      "deMinimisNote": "新加坡：≤SGD 400 GST 全免（除酒类烟草外的商品大多无关税）。",
+      "deMinimisNoteEn": "Singapore: ≤SGD 400 GST free; most goods are duty-free except liquor/tobacco.",
+      "tariffSource": {
+        "title": "Singapore Customs (working tariff)",
+        "url": "https://www.customs.gov.sg/businesses/importing-goods/bringing-goods-into-singapore/"
+      },
+      "fxPerUsd": 1.2738
+    },
+    {
+      "code": "KR",
+      "name": "韩国",
+      "nameEn": "South Korea",
+      "region": null,
+      "simplified": true,
+      "currency": "KRW",
+      "vatRate": 10,
+      "vatName": "增值税",
+      "vatNameEn": "VAT",
+      "dutyDeMinimis": 150000,
+      "vatDeMinimis": 150000,
+      "deMinimisNote": "韩国：到岸价 ≤KRW 150,000（约 $150）关税与增值税全免（个人自用）。",
+      "deMinimisNoteEn": "South Korea: CIF ≤KRW 150,000 (≈$150) duty & VAT free (personal use).",
+      "tariffSource": {
+        "title": "Korea Customs (tariff database)",
+        "url": "https://www.customs.go.kr/english/main/main.do"
+      },
+      "fxPerUsd": 1376.6
+    },
+    {
+      "code": "AE",
+      "name": "阿联酋",
+      "nameEn": "United Arab Emirates",
+      "region": null,
+      "simplified": true,
+      "currency": "AED",
+      "vatRate": 5,
+      "vatName": "增值税",
+      "vatNameEn": "VAT",
+      "dutyDeMinimis": 300,
+      "vatDeMinimis": 300,
+      "deMinimisNote": "阿联酋：≤AED 300 关税与增值税全免（个人包裹口径）。",
+      "deMinimisNoteEn": "UAE: ≤AED 300 duty & VAT free (personal parcels).",
+      "tariffSource": {
+        "title": "UAE Federal Tax Authority",
+        "url": "https://tax.gov.ae/en/default.aspx"
+      },
+      "fxPerUsd": 3.6725
+    },
+    {
+      "code": "CN",
+      "name": "中国大陆",
+      "nameEn": "Mainland China",
+      "region": null,
+      "simplified": true,
+      "currency": "CNY",
+      "fxPerUsd": 6.7358,
+      "vatRate": 13,
+      "vatName": "进口增值税",
+      "vatNameEn": "Import VAT",
+      "dutyDeMinimis": 1000,
+      "vatDeMinimis": 1000,
+      "deMinimisNote": "中国：个人邮寄物品应征税额 ≤¥50（货值约 ≤¥1,000）免征；商业进口无此优惠。",
+      "deMinimisNoteEn": "China: personal postal goods with tax ≤¥50 (value ≈ ≤¥1,000) are exempt; no de minimis for commercial imports.",
+      "tariffSource": {
+        "title": "中华人民共和国海关总署（进出口税则）",
+        "url": "http://www.customs.gov.cn/customs/302249/302266/302267/index.html"
+      }
+    }
+  ],
+  "fxAsOf": "2026-08-31",
+  "fxSource": {
+    "title": "exchangerate-api.com open endpoint",
+    "url": "https://open.er-api.com/v6/latest/USD"
+  }
+}

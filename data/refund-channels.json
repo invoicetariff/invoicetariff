@@ -1,0 +1,152 @@
+{
+ "version": "0.1.0",
+ "asOf": "2026-09-21",
+ "meta": {
+  "baseline": "CBP 'IEEPA duty refunds' official page (updated 2026-09-02, verified 2026-09-21) + refund channel review 2026-09",
+  "quality": "期限数字全部来自官方页/法条原文：CAPE 80/90 天（19 U.S.C. § 1501 自愿重结算授权）、protest 180 天（19 U.S.C. § 1514）、drawback 5 年（19 U.S.C. § 1313）、PSC 1 年（19 C.F.R. § 162.74）；无 sample 项。CAPE 阶段细则（Phase 2 recon、CSV 上传等）以 CBP 页面与后续 CSMS 公告为准。",
+  "nextHardDates": [
+   "CAPE Phase 1 对未结算条目无固定截止（常态入口），已结算条目为结算后 80 天窗口",
+   "2026-11-10 对华排除/停战到期（影响仍在征税层的 drawback 长线资格，见 ruleset-seed.json nextHardDates）"
+  ],
+  "estimateBandPct": 10,
+  "estimateBandNote": "免费层估算口径：置信区间 = 计算基额 ±10%（校准输入误差：货值/税率记忆偏差、分摊口径）；上限不含利息（19 U.S.C. § 1505 按季度利率另计）。区间参数版本化于此，调校须改数据改版本，不改代码。",
+  "closingSoonDays": 30
+ },
+ "channels": [
+  {
+   "id": "cape",
+   "name": "CAPE 批量退款（IEEPA）",
+   "nameEn": "CAPE consolidated refund (IEEPA)",
+   "legalBasis": "19 U.S.C. § 1501（自愿重结算）+ 2026-02-24 最高法院 IEEPA 裁决后的 CBP 行政退款流程",
+   "source": {
+    "title": "CBP — IEEPA duty refunds (updated 2026-09-02)",
+    "url": "https://www.cbp.gov/trade/programs-administration/trade-remedies/ieepa-duty-refunds"
+   },
+   "appliesTo": {
+    "layerKinds": [
+     "ieepa"
+    ],
+    "chapter99": [
+     "9903.01",
+     "9903.02"
+    ]
+   },
+   "window": {
+    "kind": "reliquidation",
+    "liquidatedWithinDays": 80,
+    "reliquidateByDays": 90,
+    "refundIssuanceDays": [
+     60,
+     90
+    ]
+   },
+   "filing": {
+    "who": "仅 IOR 或其备案报关行可申报（律师不可代报）；退款只打给 IOR 或 Form 4811 通知方，须经 ACE 账户 ACH",
+    "how": "ACE Portal CAPE 页签上传 CSV（仅 11 位 entry number，无连字符）；申报受理后不可增删改，漏报条目另开新 Declaration",
+    "lockout": "CAPE 申报后该条目不得再报 PSC 或 protest；非 IEEPA 的 PSC 须在 CAPE 申报前完成"
+   },
+   "phase2": {
+    "scope": "带 reconciliation 标记且 recon entry（type 09）尚未申报的条目（2026-06-29 起受理）",
+    "advisory": "recon 截止不足 30 天时先报 reconciliation（不含加征的 IEEPA 税），再走 CAPE"
+   },
+   "notes": {
+    "zh": "退款额含利息（19 U.S.C. § 1505 季度利率）；CBP 可能与欠税轧差（19 C.F.R. § 159.1 / § 24.72）。CBP 不会邮件索要费用或银行信息——涉钱邮件均为骗局。",
+    "en": "Refunds include interest (19 U.S.C. § 1505, quarterly IRS rates); CBP may net against underpayments (19 C.F.R. § 159.1) and offset debts (19 C.F.R. § 24.72). CBP never emails fee requests — report scams to traderelations@cbp.dhs.gov."
+   }
+  },
+  {
+   "id": "protest",
+   "name": "Protest 异议（含对 CAPE 退款额不服）",
+   "nameEn": "Protest (incl. disputing CAPE refund decisions)",
+   "legalBasis": "19 U.S.C. § 1514（结算异议，180 天）",
+   "source": {
+    "title": "19 U.S.C. § 1514 — Protest against liquidation or reliquidation",
+    "url": "https://www.law.cornell.edu/uscode/text/19/1514"
+   },
+   "appliesTo": {
+    "layerKinds": [
+     "ieepa",
+     "china301",
+     "global301",
+     "section232",
+     "section338",
+     "mfn"
+    ],
+    "chapter99": [
+     "9903.01",
+     "9903.02"
+    ]
+   },
+   "window": {
+    "kind": "days_from_liquidation",
+    "days": 180
+   },
+   "notes": {
+    "zh": "错过 protest 180 天 = 该通道永久关闭（策略文档 §三.3：deadline 排序优先于金额排序的理由）。对 CAPE 退款决定不服，可在（重）结算后就退款额提 protest。",
+    "en": "Missing the 180-day protest window closes this channel permanently (strategy doc §三.3: deadline-first ranking). A refund decision may be protested upon (re)liquidation."
+   }
+  },
+  {
+   "id": "drawback",
+   "name": "Duty Drawback（出口退税）",
+   "nameEn": "Duty Drawback (upon exportation)",
+   "legalBasis": "19 U.S.C. § 1313（进口后 5 年内申请）",
+   "source": {
+    "title": "CBP — Duty drawback (19 U.S.C. 1313)",
+    "url": "https://www.cbp.gov/trade/programs-administration/entry-summary/duty-drawback"
+   },
+   "appliesTo": {
+    "layerKinds": [
+     "mfn",
+     "china301",
+     "global301",
+     "section232",
+     "section338"
+    ],
+    "chapter99": [
+     "9903.88",
+     "9903.05"
+    ]
+   },
+   "window": {
+    "kind": "years_from_import",
+    "years": 5
+   },
+   "notes": {
+    "zh": "适用于仍在征收的税层（MFN/301/232）：货物出口后可退最高 99%。IEEPA 层不适用 drawback（税已停征，走 CAPE）。1313(j) 允许申请延长，作提示不计入默认期限。",
+    "en": "Applies to still-collected layers (MFN/301/232): up to 99% refundable upon exportation. IEEPA duties are not drawback-eligible (collection terminated — use CAPE). 19 U.S.C. § 1313(j) extensions exist; noted, not part of the default deadline."
+   }
+  },
+  {
+   "id": "psc",
+   "name": "PSC 结算后更正",
+   "nameEn": "Post-Summary Correction (PSC)",
+   "legalBasis": "19 C.F.R. § 162.74（结算后 1 年）",
+   "source": {
+    "title": "19 C.F.R. § 162.74 — Supplementary information on CBP forms",
+    "url": "https://www.law.cornell.edu/cfr/text/19/162.74"
+   },
+   "appliesTo": {
+    "layerKinds": [
+     "mfn",
+     "china301",
+     "global301",
+     "section232",
+     "section338"
+    ],
+    "chapter99": [
+     "9903.88",
+     "9903.05"
+    ]
+   },
+   "window": {
+    "kind": "days_from_liquidation",
+    "days": 365
+   },
+   "notes": {
+    "zh": "CAPE 申报前必须先完成非 IEEPA 的 PSC（CBP 官方页明示）；含 IEEPA 条目在 CAPE 申报后即不可 PSC。",
+    "en": "Non-IEEPA PSCs must be filed BEFORE a CAPE Declaration (per CBP); IEEPA entries cannot be PSC-corrected after the Declaration."
+   }
+  }
+ ]
+}
