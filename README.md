@@ -2,7 +2,7 @@
 
 https://invoicetariff.com
 
-![ruleset](https://img.shields.io/badge/ruleset-0.3.2-blue) ![data as of](https://img.shields.io/badge/as_of-2026--09--24-informational) ![license](https://img.shields.io/badge/license-MIT-green) ![no sign-up](https://img.shields.io/badge/sign--up-none-success)
+![ruleset](https://img.shields.io/badge/ruleset-0.3.4-blue) ![data as of](https://img.shields.io/badge/as_of-2026--10--07-informational) ![license](https://img.shields.io/badge/license-MIT-green) ![no sign-up](https://img.shields.io/badge/sign--up-none-success)
 
 Free, browser-based United States import tariff toolkit for cross-border sellers, e-commerce operators, and small importers. Enter a declared value and an HTS code, get the fully stacked duty estimate — MFN, Section 301, Section 232, de minimis, MPF/HMF fees — in seconds, then generate a compliant commercial invoice in one click. Every rate in the result is traceable to its source file and legal basis.
 
@@ -27,7 +27,7 @@ Free, browser-based United States import tariff toolkit for cross-border sellers
 
 All rate logic of the calculator ships as versioned JSON in [`data/`](./data):
 
-- [`data/ruleset-seed.json`](./data/ruleset-seed.json) — the full stacked-rate ruleset: MFN (curated 460+ codes), China Section 301 lists + exclusions, Global Section 301 program (60 country tiers), Section 232 measures, Section 338, IEEPA historical layer, and the FY2026 fee table (MPF/HMF/informal entry).
+- [`data/ruleset-seed.json`](./data/ruleset-seed.json) — the full stacked-rate ruleset: MFN (curated 460+ codes), China Section 301 lists + exclusions, Global Section 301 program (60 country tiers), Section 232 measures, Section 338, IEEPA historical layer, and the FY2027 fee table (MPF/HMF/informal entry).
 - [`data/mfn-full.json`](https://github.com/invoicetariff/hs-codes-database) — full 5,689-code HTS 8-digit table with US general duty rates (kept in the [hs-codes-database](https://github.com/invoicetariff/hs-codes-database) repo).
 - [`data/destinations.json`](./data/destinations.json) — 16 destination countries: simplified VAT/GST rates and de minimis reference config for landed-cost estimates.
 - [`data/changelog.json`](./data/changelog.json) — machine-readable changelog of published rule changes (41 entries), the source of the [Tariff Change Radar](https://invoicetariff.com/radar).
@@ -35,20 +35,30 @@ All rate logic of the calculator ships as versioned JSON in [`data/`](./data):
 
 ## Data provenance & quality
 
-- `ruleset-seed.json` **v0.3.2** (as of **2026-09-24**).
+- `ruleset-seed.json` **v0.3.4** (as of **2026-10-07**).
 - MFN rates: USITC Harmonized Tariff Schedule (reststop export), official `general` column, 8-digit codes.
 - Section 301 / 232 / IEEPA / fee lines carry a `source` object (title + URL) and `legalBasis` string on every entry.
-- ⚠️ **Quality flag**: except the FY2026 fee table, rate lines in v0.3.x carry `sample`/`unverified` annotations — good for estimates and demos, not yet certified for production customs declarations. The `unverifiedNotes` and `meta.nextHardDates` fields list what is being verified next.
-- The ruleset is updated monthly (see `changelog.json`); next hard dates include the FY2027 MPF change (2026-10-01) and the 2026-11-10 China exclusions review.
+- ⚠️ **Quality flag**: except the FY2027 fee table, rate lines in v0.3.x carry `sample`/`unverified` annotations — good for estimates and demos, not yet certified for production customs declarations. The `unverifiedNotes` and `meta.nextHardDates` fields list what is being verified next.
+- The ruleset is updated monthly (see `changelog.json`); next hard dates include the 2026-11-10 China exclusions/truce review; Section 232 sector measures and the Global 301 program update via the Federal Register (see the radar).
 
-## Example: stacking an 8471.30 laptop from China (ruleset v0.3.2)
+### CSV downloads (CC BY 4.0)
+
+Stable, versioned CSV extracts of the same ruleset — every row carries `ruleset_version` / `ruleset_asof`:
+
+- [`data/us-tariff-ruleset-hts-codes.csv`](./data/us-tariff-ruleset-hts-codes.csv) — 484 HTS codes: MFN rate text + China Section 301 list/rate + Section 232 chapter hit
+- [`data/us-tariff-ruleset-economies.csv`](./data/us-tariff-ruleset-economies.csv) — 60 economies: Global-301 tier type, rate & combined cap, country add-ons
+- [`data/us-tariff-ruleset-section232.csv`](./data/us-tariff-ruleset-section232.csv) — the 8 Section 232 sector measures with official source links
+
+Citation guide and live tables: https://invoicetariff.com/en/tariff-data
+
+## Example: stacking an 8471.30 laptop from China (ruleset v0.3.4)
 
 ```text
 HTS 84713000 (portable automatic data processing machines)
   MFN general          : Free            (data/ruleset-seed.json → mfn)
   Global 301, CN tier  : 12.5%           (→ global301.tiers, effective 2026-07-24)
-  Section 301 China    : n/a for this code in v0.3.2
-  MPF (FY2026)         : 0.3464% of value, min $33.58, max $651.50  (→ fees)
+  Section 301 China    : n/a for this code in v0.3.4
+  MPF (FY2027)         : 0.3464% of value, min $34.58, max $670.86  (→ fees)
   HMF (ocean)          : 0.125%          (→ fees)
 ```
 

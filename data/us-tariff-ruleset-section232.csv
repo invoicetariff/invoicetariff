@@ -1,0 +1,9 @@
+﻿sector,layer_name,rate_pct,hts_scope,effective_from,source_url,ruleset_version,ruleset_asof
+steel,Section 232 steel articles (50%),50,73,2025-06-04,https://hts.usitc.gov/reststop/file?release=currentRelease&filename=Chapter%2099_III,0.3.4,2026-10-07
+aluminium,Section 232 aluminium articles (50%),50,76,2025-06-04,https://hts.usitc.gov/reststop/file?release=currentRelease&filename=Chapter%2099_III,0.3.4,2026-10-07
+copper,Section 232 copper semi-finished (50%),50,74,2025-08-01,https://hts.usitc.gov/reststop/file?release=currentRelease&filename=Chapter%2099_III,0.3.4,2026-10-07
+autos,Section 232 autos & parts (25%),25,87,2025-11-01,https://hts.usitc.gov/reststop/file?release=currentRelease&filename=Chapter%2099_III,0.3.4,2026-10-07
+timber,Section 232 softwood timber (10%),10,44,2026-01-09,https://hts.usitc.gov/reststop/file?release=currentRelease&filename=Chapter%2099_III,0.3.4,2026-10-07
+furniture,Section 232 furniture (25%),25,94,2025-10-14,https://hts.usitc.gov/reststop/file?release=currentRelease&filename=Chapter%2099_III,0.3.4,2026-10-07
+pharma,"Section 232 pharmaceuticals (20%, general tier)",20,30,2026-09-29,https://hts.usitc.gov/reststop/file?release=currentRelease&filename=Chapter%2099_III,0.3.4,2026-10-07
+semiconductors,Section 232 semiconductors (25%),25,847150; 847180; 847330,2026-01-15,https://hts.usitc.gov/reststop/file?release=currentRelease&filename=Chapter%2099_III,0.3.4,2026-10-07

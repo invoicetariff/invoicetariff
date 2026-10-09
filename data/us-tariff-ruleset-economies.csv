@@ -1,0 +1,61 @@
+﻿country_code,country_name,tier_type,global301_rate_pct,mfn301_combined_cap_pct,chapter_99,effective_from,country_specific_layers,ruleset_version,ruleset_asof
+AE,United Arab Emirates,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+AO,Angola,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+AR,Argentina,flat,10,,9903.05.22,2026-07-24,,0.3.4,2026-10-07
+AU,Australia,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+BD,Bangladesh,flat,10,,9903.05.26,2026-07-24,,0.3.4,2026-10-07
+BH,Bahrain,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+BR,Brazil,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+BS,Bahamas,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+CA,Canada,flat,10,,9903.05.29,2026-07-24,Section 338: 50% on 3 sectors (no USMCA exemption); USMCA-qualifying goods exempt from global 301,0.3.4,2026-10-07
+CH,Switzerland,combined_cap,12.5,12.5,9903.05.73–9903.05.74,2026-07-24,,0.3.4,2026-10-07
+CL,Chile,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+CN,China,flat,12.5,,,2026-07-24,China 301 lists 2/3/4A/review (7.5%/25% by 8-digit code),0.3.4,2026-10-07
+CO,Colombia,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+CR,Costa Rica,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+DO,Dominican Republic,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+DZ,Algeria,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+EC,Ecuador,flat,10,,9903.05.35,2026-07-24,,0.3.4,2026-10-07
+EG,Egypt,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+EU,European Union,combined_cap,10,10,9903.05.38–9903.05.39,2026-07-24,,0.3.4,2026-10-07
+GB,United Kingdom,flat,10,,9903.05.81,2026-07-24,,0.3.4,2026-10-07
+GT,Guatemala,flat,10,,9903.05.40,2026-07-24,,0.3.4,2026-10-07
+GY,Guyana,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+HK,Hong Kong,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+HN,Honduras,flat,10,,,2026-07-24,,0.3.4,2026-10-07
+ID,Indonesia,flat,10,,9903.05.45,2026-07-24,,0.3.4,2026-10-07
+IL,Israel,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+IN,India,flat,10,,,2026-07-24,,0.3.4,2026-10-07
+IQ,Iraq,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+JO,Jordan,flat,10,,9903.05.50,2026-07-24,,0.3.4,2026-10-07
+JP,Japan,combined_cap,12.5,12.5,,2026-07-24,,0.3.4,2026-10-07
+KH,Cambodia,flat,10,,9903.05.28,2026-07-24,,0.3.4,2026-10-07
+KR,South Korea,combined_cap,12.5,12.5,,2026-07-24,,0.3.4,2026-10-07
+KW,Kuwait,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+KZ,Kazakhstan,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+LK,Sri Lanka,flat,10,,,2026-07-24,,0.3.4,2026-10-07
+LY,Libya,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+MA,Morocco,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+MX,Mexico,flat,10,,9903.05.55,2026-07-24,USMCA-qualifying goods exempt from global 301,0.3.4,2026-10-07
+MY,Malaysia,flat,10,,9903.05.54,2026-07-24,,0.3.4,2026-10-07
+NG,Nigeria,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+NI,Nicaragua,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+NO,Norway,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+NZ,New Zealand,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+OM,Oman,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+PE,Peru,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+PH,Philippines,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+PK,Pakistan,flat,10,,,2026-07-24,,0.3.4,2026-10-07
+QA,Qatar,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+RU,Russia,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+SA,Saudi Arabia,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+SG,Singapore,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+SV,El Salvador,flat,10,,9903.05.37,2026-07-24,,0.3.4,2026-10-07
+TH,Thailand,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+TR,Turkey,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+TT,Trinidad and Tobago,flat,10,,,2026-07-24,,0.3.4,2026-10-07
+TW,Taiwan,combined_cap,10,10,9903.05.75–9903.05.76,2026-07-24,,0.3.4,2026-10-07
+UY,Uruguay,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+VE,Venezuela,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+VN,Vietnam,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
+ZA,South Africa,flat,12.5,,,2026-07-24,,0.3.4,2026-10-07
