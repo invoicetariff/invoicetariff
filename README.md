@@ -68,6 +68,7 @@ Run the same stack live at https://invoicetariff.com/tariff-calculator — every
 
 - [us-tariff-rates-2026](https://github.com/invoicetariff/us-tariff-rates-2026) — 2026 US tariff rate layers (301/232/IEEPA/fees) as a standalone dataset.
 - [hs-codes-database](https://github.com/invoicetariff/hs-codes-database) — 5,689 HTS 8-digit codes with US general duty rates.
+- [us-tariff-lookup](https://github.com/invoicetariff/us-tariff-lookup) — the same ruleset packaged for npm: `npm install us-tariff-lookup` (zero dependencies, CLI + library, data bundled).
 
 ## License
 
